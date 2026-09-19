@@ -1,2 +1,75 @@
-import Shell from '@/components/Shell'; import {DoctorCard} from '@/components/UI'; import {clinics,doctors} from '@/lib/data'; import {CheckCircle2,MapPin,Star} from 'lucide-react';
-export default async function Page({params}:{params:Promise<{id:string}>}){const{id}=await params;const c=clinics.find(x=>x.id===id)||clinics[0];const ds=doctors.filter(d=>d.clinicId===c.id);return <Shell><section className="profileHero"><span className="eyebrow">VERIFIED CLINIC</span><h1>{c.name}</h1><p><MapPin/> {c.area}, {c.city} · <Star fill="currentColor"/> {c.rating}</p><div className="tags">{c.specialities.map(s=><span key={s}>{s}</span>)}</div></section><section className="section profileGrid"><div><h2>About the clinic</h2><p className="lead">{c.about}</p><h2>Doctors at this clinic</h2><div className="doctorGrid">{ds.map(d=><DoctorCard d={d} key={d.id}/>)}</div></div><aside className="sideCard"><h3>Clinic services</h3>{['In-clinic consultation','Online consultation','Digital prescriptions','Follow-up / revisit','Health records'].map(x=><span key={x}><CheckCircle2/>{x}</span>)}<b>Open today</b><p>{c.hours}</p><p>{c.phone}</p></aside></section></Shell>}
+import Shell from '@/components/Shell';
+import { DoctorCard } from '@/components/UI';
+import { clinics, doctors } from '@/lib/data';
+import { CheckCircle2, MapPin, Star } from 'lucide-react';
+
+export function generateStaticParams() {
+  return clinics.map((clinic) => ({
+    id: clinic.id,
+  }));
+}
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const c = clinics.find((x) => x.id === id) || clinics[0];
+  const ds = doctors.filter((d) => d.clinicId === c.id);
+
+  return (
+    <Shell>
+      <section className="profileHero">
+        <span className="eyebrow">VERIFIED CLINIC</span>
+        <h1>{c.name}</h1>
+
+        <p>
+          <MapPin /> {c.area}, {c.city} · <Star fill="currentColor" /> {c.rating}
+        </p>
+
+        <div className="tags">
+          {c.specialities.map((s) => (
+            <span key={s}>{s}</span>
+          ))}
+        </div>
+      </section>
+
+      <section className="section profileGrid">
+        <div>
+          <h2>About the clinic</h2>
+          <p className="lead">{c.about}</p>
+
+          <h2>Doctors at this clinic</h2>
+
+          <div className="doctorGrid">
+            {ds.map((d) => (
+              <DoctorCard d={d} key={d.id} />
+            ))}
+          </div>
+        </div>
+
+        <aside className="sideCard">
+          <h3>Clinic services</h3>
+
+          {[
+            'In-clinic consultation',
+            'Online consultation',
+            'Digital prescriptions',
+            'Follow-up / revisit',
+            'Health records',
+          ].map((x) => (
+            <span key={x}>
+              <CheckCircle2 />
+              {x}
+            </span>
+          ))}
+
+          <b>Open today</b>
+          <p>{c.hours}</p>
+          <p>{c.phone}</p>
+        </aside>
+      </section>
+    </Shell>
+  );
+}
