@@ -1,0 +1,2 @@
+import Link from 'next/link'; import Shell from '@/components/Shell'; import {PageHero} from '@/components/UI';
+export default function Page(){return <Shell><PageHero eyebrow="LOGIN" title="Choose your workspace." text="Open the patient or clinic demonstration experience."/><section className="section"><div className="loginGrid"><Link href="/dashboard"><b>Patient</b><span>Appointments, records and follow-ups →</span></Link><Link href="/doctor-portal"><b>Doctor / Clinic</b><span>Schedule, patients and insights →</span></Link></div></section></Shell>}

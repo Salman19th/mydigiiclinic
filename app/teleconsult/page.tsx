@@ -1,0 +1,2 @@
+import Shell from '@/components/Shell'; import {PageHero} from '@/components/UI'; import {Mic,Video} from 'lucide-react';
+export default function Page(){return <Shell><PageHero eyebrow="ONLINE CONSULTATION" title="Consult your doctor, from wherever you are." text="A presentation-ready consultation room for eligible online visits and follow-ups."/><section className="section narrow"><div className="videoRoom"><div className="videoPerson">Dr. Aarav Sharma</div><div className="videoControls"><button><Mic/></button><button><Video/></button></div></div></section></Shell>}
