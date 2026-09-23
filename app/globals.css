@@ -8,3 +8,75 @@
 .header .nav{max-width:none;width:100%;padding:0 28px;justify-content:flex-start;gap:12px}.header .menuBtn{position:static;flex:none;margin-right:2px}.header .brand{margin:0}.header .headerActions{right:28px}.heroSimplified{padding:82px 24px 76px}.heroCopySimple{display:flex;flex-direction:column;justify-content:center;min-height:390px}.heroCopySimple h1{margin-top:0}.heroActionsSimple{margin-top:30px}.heroFind{font-size:18px;padding:17px 26px;border-radius:13px;min-width:190px}.heroFind svg{width:20px;height:20px}.servicesSection{padding-top:78px}.serviceHeading{margin-bottom:38px}.serviceHeading h2{font-size:42px}.serviceDuo{display:grid;grid-template-columns:1fr 1fr;gap:22px}.servicePanel{background:#fff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 16px 45px #0f172a0b}.servicePanelHead{display:flex;align-items:center;gap:14px;padding-bottom:22px;border-bottom:1px solid #e2e8f0}.serviceHeadIcon{width:48px;height:48px;border-radius:14px;background:#ccfbf1;color:#0f766e;display:grid;place-items:center}.serviceHeadIcon svg{width:24px;height:24px}.servicePanelHead small{color:#0f766e;font-size:10px;font-weight:900;letter-spacing:.12em}.servicePanelHead h3{font-size:25px;margin:3px 0 0}.serviceItems{display:grid;gap:8px;margin-top:14px}.serviceItem{display:grid;grid-template-columns:42px 1fr 22px;gap:12px;align-items:center;padding:13px;border-radius:14px}.serviceItem:hover{background:#f0fdfa}.serviceItem>span{width:40px;height:40px;border-radius:11px;background:#f0fdfa;color:#0f766e;display:grid;place-items:center}.serviceItem b{font-size:14px}.serviceItem p{font-size:12px;line-height:1.45;color:#64748b;margin:3px 0 0}.serviceArrow{color:#94a3b8}.providerServiceGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.providerService{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:16px;display:grid;gap:7px}.providerService svg{color:#0d9488;width:22px;height:22px}.providerService b{font-size:13px}.providerService p{font-size:11px;line-height:1.45;color:#64748b;margin:0}.providerJoinLink{display:inline-flex;align-items:center;gap:7px;color:#0f766e;font-size:13px;font-weight:850;margin-top:20px}.findDoctorSection{background:#f1f5f9;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0}.leftHead{text-align:left;margin-left:0}.discoverGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.discoverColumn{background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:22px}.discoverColumn h3{margin:0 0 14px;font-size:17px}.discoverColumn a{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f1f5f9;color:#475569;font-size:13px}.discoverColumn a:last-child{border:0}.discoverColumn a:hover{color:#0f766e}.discoverColumn svg{width:14px;height:14px;color:#94a3b8}.careStory{padding-top:86px;padding-bottom:86px}.experienceBlock{border-radius:22px;padding:28px;margin-top:22px}.traditionalBlock{background:#f8fafc;border:1px solid #e2e8f0}.connectedBlock{background:#07111f;color:#fff;border:1px solid #172033}.experienceTitle span{font-size:10px;font-weight:900;letter-spacing:.13em;color:#64748b}.connectedBlock .experienceTitle span{color:#5eead4}.experienceTitle h3{font-size:24px;margin:5px 0 24px}.experienceSteps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.experienceStep{position:relative;padding:18px;border-radius:15px;background:#fff;border:1px solid #e2e8f0;display:flex;flex-direction:column;align-items:flex-start}.connectedBlock .experienceStep{background:#111c2e;border-color:#243249}.experienceIcon{width:38px;height:38px;border-radius:11px;background:#ccfbf1;color:#0f766e;display:grid;place-items:center;margin-bottom:18px}.experienceIcon.muted{background:#e2e8f0;color:#64748b}.experienceStep small{font-weight:900;color:#94a3b8}.experienceStep b{margin-top:4px;font-size:14px}.experienceStep p{font-size:12px;line-height:1.5;color:#64748b;margin:6px 0 0}.connectedBlock .experienceStep p{color:#94a3b8}.howWorks{background:#0f172a;color:#fff}.howWorks .sectionHead p{color:#94a3b8}.howGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.howGrid>div{padding:23px;border-radius:16px;background:#172033;border:1px solid #293548;display:flex;flex-direction:column;gap:8px}.howGrid svg{color:#2dd4bf;width:25px;height:25px}.howGrid b{font-size:16px}.howGrid span{color:#94a3b8;font-size:12px;line-height:1.5}
 @media(max-width:900px){.serviceDuo{grid-template-columns:1fr}.discoverGrid,.experienceSteps,.howGrid{grid-template-columns:1fr 1fr}.header .nav{padding:0 14px}.header .headerActions{right:14px}}
 @media(max-width:560px){.header .brand{font-size:15px;gap:7px}.header .brand .logo{display:none}.heroCopySimple{min-height:auto}.servicePanel{padding:20px}.providerServiceGrid,.discoverGrid,.experienceSteps,.howGrid{grid-template-columns:1fr}.serviceItem{grid-template-columns:38px 1fr 18px}.header .headerJoin{font-size:11px}.heroSimplified{padding-top:58px}}
+.brandLogo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .brandLogo {
+    width: 36px;
+    height: 36px;
+  }
+}
+.brandName {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.brandBlue {
+  color: #0b1f3a;
+}
+
+.brandGreen {
+  color: #14b8a6;
+}
+/* Footer brand needs light text on dark background */
+.footer .brandBlue {
+  color: #ffffff;
+}
+
+.footer .brandGreen {
+  color: #14b8a6;
+}
+
+.footer .brandName {
+  font-weight: 800;
+}
+.phoneBrand {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.phoneBrandLogo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.phoneBrandName {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.4px;
+  line-height: 1;
+}
+
+.phoneBrandName .brandBlue {
+  color: #0b1f3a;
+}
+
+.phoneBrandName .brandGreen {
+  color: #14b8a6;
+}
+/* Keep hero phone mockup perfectly straight */
+.heroSimplified .phone {
+  transform: none !important;
+  rotate: 0deg !important;
+}

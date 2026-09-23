@@ -42,7 +42,54 @@ export default function Home(){
           <h1>Your clinic,<br/><em>now just one tap away.</em></h1>
           <div className="actions heroActionsSimple"><Link className="primary heroFind" href="/clinics"><Search/> Find a Clinic</Link></div>
         </div>
-        <div className="phone"><div className="phoneTop"><span>MyDigiClinic</span><HeartPulse/></div><div className="phoneSearch"><Search/> Search doctors, clinics, treatments</div><div className="phoneCard"><small>YOUR CLINIC</small><b>CarePoint Multispeciality</b><span>Greater Kailash · Open today</span></div><div className="phoneRow"><div><CalendarDays/><b>Book</b><span>Appointment</span></div><div><Video/><b>Consult</b><span>Online</span></div></div><div className="phoneNotice"><CheckCircle2/> Appointment confirmed · 4:00 PM</div></div>
+        <div className="phone">
+  <div className="phoneTop">
+    <div className="phoneBrand">
+      <img
+        src="/mydigiiclinic/logo.png"
+        alt="MyDigiClinic"
+        className="phoneBrandLogo"
+      />
+
+      <span className="phoneBrandName">
+        <span className="brandBlue">My</span>
+        <span className="brandGreen">Digi</span>
+        <span className="brandBlue">Clinic</span>
+      </span>
+    </div>
+
+  </div>
+
+  <div className="phoneSearch">
+    <Search />
+    Search doctors, clinics, treatments
+  </div>
+
+  <div className="phoneCard">
+    <small>YOUR CLINIC</small>
+    <b>CarePoint Multispeciality</b>
+    <span>Greater Kailash · Open today</span>
+  </div>
+
+  <div className="phoneRow">
+    <div>
+      <CalendarDays />
+      <b>Book</b>
+      <span>Appointment</span>
+    </div>
+
+    <div>
+      <Video />
+      <b>Consult</b>
+      <span>Online</span>
+    </div>
+  </div>
+
+  <div className="phoneNotice">
+    <CheckCircle2 />
+    Appointment confirmed · 4:00 PM
+  </div>
+</div>
       </div>
     </section>
 
